@@ -2,4 +2,14 @@
   <span>Нажми меня</span>
 </app-button>
 
-{{isButtinClicked ? 'Кнопка нажата' : 'Кнопка не нажата'}}
+<app-input
+  type="email"
+  iconUrl="icons/mail.svg"
+  (controlValue)="onInputChange($event)"
+  placeholder="Email" />
+
+<app-input
+  type="password"
+  iconUrl="icons/lock-password.svg"
+  (controlValue)="onInputChange($event)"
+  placeholder="Email" />

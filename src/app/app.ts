@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { ButtonComponent } from './shared/components/button/button.component';
+import { InputComponent } from './shared/components/input/input.component';
 
 @Component({
   selector: 'app-root',
-  imports: [ButtonComponent],
+  imports: [ButtonComponent, InputComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
@@ -18,5 +19,9 @@ export class App {
 
   onButtonClick() {
     this.isButtinClicked = !this.isButtinClicked;
+  }
+
+  onInputChange($event: string) {
+    console.log($event);
   }
 }

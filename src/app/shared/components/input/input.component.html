@@ -1,0 +1,10 @@
+<div class="form__control">
+  <div class="form__icon">
+    <img class="form__icon--image" [src]="iconUrl()" [alt]="type()" />
+  </div>
+  <input
+    class="form__input"
+    [type]="type()"
+    [placeholder]="placeholder()"
+    (input)="onInput($event.target.value)" />
+</div>
